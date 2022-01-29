@@ -28,6 +28,9 @@ static const uint8_t chip8_fontset[] = //as from papers
 
 
 
+#define OPCODE8nN(X) ( ((X) & 0xF000) >> 12u) | ((X) & 0x000F)
+
+
 chip8::chip8() : pc{0x00}, opcode{0}, sp{0}
 {
 
@@ -86,6 +89,18 @@ void chip8::emulatetest()
     decode(0x2FF1); //call FF1
 
     decode(0x00EE); //return from FF1
+
+    //will do some test helper macro for future calling corsponding opcode
+    auto x0 = OPCODE8nN(0x8FF0);
+    auto x1 = OPCODE8nN(0x8FF1);
+    auto x2 = OPCODE8nN(0x8FF2);
+    auto x3 = OPCODE8nN(0x8FF3);
+    auto x4 = OPCODE8nN(0x8FF4);
+    auto x5 = OPCODE8nN(0x8FF5);
+    auto x6 = OPCODE8nN(0x8FF6);
+
+    return;
+
 }
 
 //nothing to see here
@@ -116,7 +131,7 @@ void chip8::decode(uint16_t op)
     default:
         break;
     }
-\
+
     uint8_t code = (op >> 12u) & 0xF;
     switch (code) {
     case 0x1: {
@@ -141,6 +156,7 @@ void chip8::decode(uint16_t op)
     }
     case 0x8:
     {
+
         uint8_t regX = (op & 0x0F00u) >> 8u;
         uint8_t regY = (op &0x000F0u) >> 4u;
         uint16_t summ = m_mem.V[regX] + m_mem.V[regY];
@@ -149,7 +165,7 @@ void chip8::decode(uint16_t op)
         } else {
             m_mem.V[0xF] = 0;
         }
-        m_mem.V[regX] = summ & 0xFF00u;
+        m_mem.V[regX] = summ & 0xFFu;
         break;
     }
     default:
