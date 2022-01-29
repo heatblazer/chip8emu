@@ -17,3 +17,6 @@ SOURCES += main.cpp \
 HEADERS += \
     chip8.h
 
+DISTFILES += \
+    README.md
+
