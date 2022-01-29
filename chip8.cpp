@@ -154,8 +154,8 @@ void chip8::decode(uint16_t op)
         m_mem.V[reg] += data;
         break;
     }
-    case 0x8:
-    {
+    case 0x8: // can't do it as is - will use helper and call the coresponding opcode
+    {         //since last 4 bits tells the call
 
         uint8_t regX = (op & 0x0F00u) >> 8u;
         uint8_t regY = (op &0x000F0u) >> 4u;
