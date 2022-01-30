@@ -11,6 +11,13 @@ int main(int argc, char** argv) {
 //    test.emulatetest();
     //hardocded test - will do later
 #if 1
+
+// like a text draw
+    test.blinkred();
+    test.dumpgfx();
+// end test draw
+
+
     if (test.loadApplication("/home/ilian/gitprojects/chip8emu/assets/test_opcode.ch8")) {
         //test.romtest(); //after loading - test opcodes
         test.start();

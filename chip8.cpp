@@ -157,6 +157,27 @@ void chip8::emulatetest()
 }
 
 
+void chip8::dumpgfx()
+{
+    for(int x=0; x < chip8::Width; x++) {
+        for (int y=0; y < chip8::Height; y++) {
+            printf("[%02x]", m_mem.gfx[x * chip8::Height + y]);
+        }
+    }
+    puts("...");
+
+}
+
+void chip8::blinkred()
+{
+    for(int x=0; x < chip8::Width; x++) {
+        for (int y=0; y < chip8::Height; y++) {
+            m_mem.gfx[x * chip8::Height + y] = 0xFA;
+        }
+    }
+}
+
+
 //nothing to see here
 uint16_t chip8::fetch()
 {
@@ -247,6 +268,27 @@ void chip8::decode(uint16_t op)
         puts("Rand & addr");
         uint8_t regX = (op & 0x0F00u) >> 8u;
         m_mem.V[regX] = rand() & (0x00FF & op);
+        break;
+    }
+    case 0xD: {
+        puts("Draw call");
+        //DXYN 	Display 	draw(Vx, Vy, N) 	Draws a sprite at coordinate (VX, VY) that has a width of 8 pixels and a height of N pixels.
+        //Each row of 8 pixels is read as bit-coded starting from memory location I;
+        //I value does not change after the execution of this instruction.
+        //As described above, VF is set to 1 if any screen pixels are flipped from set to unset when the sprite is drawn,
+        //and to 0 if that does not happen
+        uint8_t regX = (op & 0x0F00u) >> 8u;
+        uint8_t regY  = (op & 0x00F0u) >> 4u;
+        uint8_t heightN = (op & 0x000Fu);
+        int xpos = m_mem.V[regX] % chip8::Width;
+        int ypos = m_mem.V[regY] % chip8::Height;
+        //we will read I
+        for(uint8_t i = 0; i < heightN; i++) {
+            uint8_t sprite = m_mem.memory[I.value + i];
+            for(uint8_t j=0; j < 8; j++) {
+                // set pixel at screen ... TODO
+            }
+        }
         break;
     }
     default:

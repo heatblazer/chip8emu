@@ -10,6 +10,12 @@ class chip8
 {
 public:
     std::atomic<bool> Running;
+
+    enum ScreenSize {
+        Width = 64,
+        Height = 32
+    };
+
 public:
     chip8();
     ~chip8();
@@ -25,6 +31,9 @@ public:
 #if 1 //dbg
     void emulatetest();
 
+    void dumpgfx();
+
+    void blinkred();
 #endif
 
 private:
