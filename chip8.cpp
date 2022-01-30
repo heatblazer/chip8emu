@@ -1,8 +1,28 @@
 #include "chip8.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+#define OP_8XY0 0x80
+#define OP_8XY1 0x81
+#define OP_8XY2 0x82
+#define OP_8XY3 0x83
+#define OP_8XY4 0x84
+#define OP_8XY5 0x85
+#define OP_8XY6 0x86
+#define OP_8XY7 0x87
+#define OP_8XY8 0x88
+#define OP_8XY9 0x89
+#define OP_8XYA 0x8A
+#define OP_8XYB 0x8B
+#define OP_8XYC 0x8C
+#define OP_8XYD 0x8D
+#define OP_8XYE 0x8E
+
+
+
 
 static const unsigned int START_ADDRESS = 0x200; //as from papers
 
@@ -29,6 +49,8 @@ static const uint8_t chip8_fontset[] = //as from papers
 
 
 #define OPCODE8nN(X) ( ((X) & 0xF000) >> 8u) | ((X) & 0x000F)
+
+#define OP8X_Y_OP(regX, regY, OP) 0x8##regX##regY##OP
 
 
 chip8::chip8() : pc{0x00}, opcode{0}, sp{0}
@@ -90,35 +112,25 @@ void chip8::emulatetest()
 
     decode(0x00EE); //return from FF1
 
-#if 0 // dbf
-    //will do some test helper macro for future calling corsponding opcode
-    auto x0 = OPCODE8nN(0x8FF0);
-    auto x1 = OPCODE8nN(0x8FF1);
-    auto x2 = OPCODE8nN(0x8FF2);
-    auto x3 = OPCODE8nN(0x8FF3);
-    auto x4 = OPCODE8nN(0x8FF4);
-    auto x5 = OPCODE8nN(0x8FF5);
-    auto x6 = OPCODE8nN(0x8FF6);
-    auto x7 = OPCODE8nN(0x8FF7);
-    auto x8 = OPCODE8nN(0x8FF8);
-    auto x9 = OPCODE8nN(0x8FF9);
-    auto xA = OPCODE8nN(0x8FFA);
-    auto xB = OPCODE8nN(0x8FFB);
-    auto xC = OPCODE8nN(0x8FFC);
-    auto xD = OPCODE8nN(0x8FFD);
-    auto xE = OPCODE8nN(0x8FFE);
-#endif
     // tst
     decode(0x61AF); // store in 1
-    decode(0x620A); // store in 1
+    decode(0x620A); // store in 2
     decode(0x8124); // add 1 and 2
     printf("test print: ....\r\n");
     // load in 3 and 4 w/carry
-    decode(0x63FF); // store in 1
-    decode(0x641A); // store in 1
-    decode(0x8344); // add 1 and 2
+    decode(0x63FF); // store in 3
+    decode(0x641A); // store in 4
+    decode(0x8344); // add 3 and 4
 
+    decode(0x65FA); // store 15 in 5th
+    decode(0x85F8); // test msbit
 
+    uint16_t ex1 = 0x8124;
+    uint16_t ex = OP8X_Y_OP(1,2,4);
+    // just test cmp no assert
+    if (ex1 != ex) {
+        //
+    }
     return;
 
 }
@@ -138,13 +150,11 @@ void chip8::decode(uint16_t op)
     uint8_t op0 = (op & 0x00FF);
     switch (op0) {
     case 0x00E0: {
-        printf("Clear scrn\r\n");
         //cleaer screen
         memset(&m_mem.gfx, 0, sizeof(m_mem.gfx));
         break;
     }
     case 0x00EE: {
-        printf("return from sub\r\n");
         pc = stack[--sp]; //pop the stack
         break;
     }
@@ -176,7 +186,6 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0x7: {
-        printf("ADD\r\n");
         uint8_t reg = (op & 0x0F00) >> 8;
         uint8_t data = (op & 0x00FF);
         m_mem.V[reg] += data;
@@ -196,29 +205,29 @@ void chip8::decode8nX(uint16_t opc8)
 {
     uint8_t op8 = OPCODE8nN(opc8);
     uint8_t regX=0, regY=0;
-    if (op8 < 128 || op8 > 142)
+    if (op8 < OP_8XY0 || op8 > OP_8XYE)
         return;
     regX = (opc8 & 0x0F00u) >> 8u;
     regY = (opc8 & 0x000F0u) >> 4u;
 
     switch (op8) {
-    case 128: { //wiki: 8XY0 	Assig 	Vx = Vy 	Sets VX to the value of VY.
+    case OP_8XY0: { //wiki: 8XY0 	Assig 	Vx = Vy 	Sets VX to the value of VY.
         m_mem.V[regX] = m_mem.V[regY];
         break;
     }
-    case 129: { //8XY1 	BitOp 	Vx |= Vy 	Sets VX to VX or VY. (Bitwise OR operation);
+    case OP_8XY1: { //8XY1 	BitOp 	Vx |= Vy 	Sets VX to VX or VY. (Bitwise OR operation);
         m_mem.V[regX] |= m_mem.V[regY];
         break;
     }
-    case 130: { //8XY2 	BitOp 	Vx &= Vy 	Sets VX to VX and VY. (Bitwise AND operation);
+    case OP_8XY2: { //8XY2 	BitOp 	Vx &= Vy 	Sets VX to VX and VY. (Bitwise AND operation);
         m_mem.V[regX] &= m_mem.V[regY];
         break;
     }
-    case 131: { //8XY3[a] 	BitOp 	Vx ^= Vy 	Sets VX to VX xor VY.
+    case OP_8XY3: { //8XY3[a] 	BitOp 	Vx ^= Vy 	Sets VX to VX xor VY.
         m_mem.V[regX] ^= m_mem.V[regY];
         break;
     }
-    case 132: { //8XY4 	Math 	Vx += Vy 	Adds VY to VX. VF is set to 1 when there's a carry, and to 0 when there is not.
+    case OP_8XY4: { //8XY4 	Math 	Vx += Vy 	Adds VY to VX. VF is set to 1 when there's a carry, and to 0 when there is not.
         uint16_t summ = m_mem.V[regX] + m_mem.V[regY];
         if (summ > 0xFFu) {
             m_mem.V[0xF] = 1;//carry
@@ -228,7 +237,7 @@ void chip8::decode8nX(uint16_t opc8)
         m_mem.V[regX] = summ & 0xFFu;
         break;
     }
-    case 133: { //8XY5 	Math 	Vx -= Vy 	VY is subtracted from VX. VF is set to 0 when there's a borrow, and 1 when there is not.
+    case OP_8XY5: { //8XY5 	Math 	Vx -= Vy 	VY is subtracted from VX. VF is set to 0 when there's a borrow, and 1 when there is not.
         if (m_mem.V[regX] > m_mem.V[regY]) {
             m_mem.V[0xF] = 1;
         } else {
@@ -237,13 +246,23 @@ void chip8::decode8nX(uint16_t opc8)
         m_mem.V[regX] -= m_mem.V[regY];
         break;
     }
-    case 134: { //8XY6[a] 	BitOp 	Vx >>= 1 	Stores the least significant bit of VX in VF and then shifts VX to the right by 1.[b]
+    case OP_8XY6: { //8XY6[a] 	BitOp 	Vx >>= 1 	Stores the least significant bit of VX in VF and then shifts VX to the right by 1.[b]
         m_mem.V[0xF] = m_mem.V[regX] & 0x01;
         m_mem.V[regX] >>= 1;
         break;
     }
-    case 135: {
-
+    case OP_8XY7: { //8XY7[a] 	Math 	Vx = Vy - Vx 	Sets VX to VY minus VX. VF is set to 0 when there's a borrow, and 1 when there is not.
+        if (m_mem.V[regY] < m_mem.V[regX]) {
+            m_mem.V[0xF] = 1;
+        } else {
+            m_mem.V[0xF] = 0;
+        }
+        m_mem.V[regX] = m_mem.V[regY] - m_mem.V[regX];
+        break;
+    }
+    case OP_8XY8: {
+        m_mem.V[0xF] = (m_mem.V[regX] & 0x80u) >> 7u;
+        m_mem.V[regX] <<= 1;
         break;
     }
     default:
