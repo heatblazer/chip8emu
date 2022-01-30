@@ -13,12 +13,14 @@
 #define OP_8XY5 0x85
 #define OP_8XY6 0x86
 #define OP_8XY7 0x87
+/* well - not present in the spec...
 #define OP_8XY8 0x88
 #define OP_8XY9 0x89
 #define OP_8XYA 0x8A
 #define OP_8XYB 0x8B
 #define OP_8XYC 0x8C
 #define OP_8XYD 0x8D
+*/
 #define OP_8XYE 0x8E
 
 static const unsigned int START_ADDRESS = 0x200; //as from papers
@@ -46,9 +48,6 @@ static const uint8_t chip8_fontset[] = //as from papers
 
 
 #define OPCODE8nN(X) ( ((X) & 0xF000) >> 8u) | ((X) & 0x000F)
-
-#define OP8X_Y_OP(regX, regY, OP) 0x8##regX##regY##OP
-
 
 chip8::chip8() : pc{0x00}, opcode{0}, sp{0}
 {
@@ -136,12 +135,12 @@ void chip8::emulatetest()
     decode(0x65FA); // store 15 in 5th
     decode(0x85F8); // test msbit
 
-    uint16_t ex1 = 0x8124;
-    uint16_t ex = OP8X_Y_OP(1,2,4);
-    // just test cmp no assert
-    if (ex1 != ex) {
-        //
-    }
+    decode(0x9430); // skip next if X ne Y
+
+    decode(0xAA1F); // load in I the 01F for example
+
+    decode(0xBAA0);
+
     return;
 
 }
@@ -217,9 +216,31 @@ void chip8::decode(uint16_t op)
         m_mem.V[reg] += data;
         break;
     }
-    case 0x8: // can't do it as is - will use helper and call the coresponding opcode
-    {         //since last 4 bits tells the call
+    case 0x8: {// can't do it as is - will use helper and call the coresponding opcode
+             //since last 4 bits tells the call
         decode8nX(op); //helper
+        break;
+    }
+    case 0x9: {//9XY0 	Cond 	if (Vx != Vy) 	Skips the next instruction if VX does not equal VY. (Usually the next instruction is a jump to skip a code block);
+        puts("Skip if X ne Y");
+        uint8_t regX = (op & 0x0F00) >> 8u;
+        uint8_t regY = (op & 0x00F0) >> 4u;
+        if (m_mem.V[regX] != m_mem.V[regY]) {
+            pc += 2; //skip next, just inc the PC (always by 2)
+        }
+        break;
+    }
+    case 0xA: {//ANNN 	MEM 	I = NNN 	Sets I to the address NNN.
+        I.value = (op  & 0x0FFF);
+        break;
+    }
+    case 0xB: {//BNNN 	Flow 	PC = V0 + NNN 	Jumps to the address NNN plus V0.
+        pc = m_mem.V[0] + (op & 0x0FFF);
+        break;
+    }
+    case 0xC: {//CXNN 	Rand 	Vx = rand() & NN 	Sets VX to the result of a bitwise and operation on a random number (Typically: 0 to 255) and NN.
+        uint8_t regX = (op & 0x0F00u) >> 8u;
+        m_mem.V[regX] = rand() & (0x00FF & op);
         break;
     }
     default:
@@ -234,7 +255,6 @@ void chip8::decode8nX(uint16_t opc8)
     if (op8 < OP_8XY0 || op8 > OP_8XYE)
         return;
     puts("Decode 8XYN");
-
     regX = (opc8 & 0x0F00u) >> 8u;
     regY = (opc8 & 0x000F0u) >> 4u;
 
@@ -288,7 +308,7 @@ void chip8::decode8nX(uint16_t opc8)
         m_mem.V[regX] = m_mem.V[regY] - m_mem.V[regX];
         break;
     }
-    case OP_8XY8: {
+    case OP_8XYE: {// 8XYE[a] 	BitOp 	Vx <<= 1 	Stores the most significant bit of VX in VF and then shifts VX to the left by 1.[b]
         m_mem.V[0xF] = (m_mem.V[regX] & 0x80u) >> 7u;
         m_mem.V[regX] <<= 1;
         break;
@@ -297,5 +317,7 @@ void chip8::decode8nX(uint16_t opc8)
         break;
     }
 }
+
+
 
 

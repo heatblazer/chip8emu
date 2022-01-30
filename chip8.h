@@ -36,7 +36,6 @@ private:
 
     uint16_t pc;         // program counter
     uint16_t opcode;     // opcode
-
     union {
         uint16_t value;
         uint8_t data[sizeof(uint16_t)];
