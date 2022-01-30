@@ -5,6 +5,9 @@
 #include <string.h>
 #include <time.h>
 
+#include <chrono>
+#include <thread>
+
 #define OP_8XY0 0x80
 #define OP_8XY1 0x81
 #define OP_8XY2 0x82
@@ -62,6 +65,7 @@ chip8::~chip8()
 //well, let's init all step by step .. will redo it
 void chip8::init()
 {
+    Running = true;
     pc = START_ADDRESS;
     memset(&m_mem, 0, sizeof(m_mem));
     memset(&m_timers, 0, sizeof(m_timers));
@@ -104,7 +108,14 @@ void chip8::start()
         //fetch
         //decode
         //execute
-    // update
+
+        //<ext> update
+
+    while (Running.load()) {
+        opcode = fetch();
+        decode(opcode);
+        std::this_thread::sleep_for(std::chrono::nanoseconds(10)); // sleep for 1 second
+    }
 }
 
 //the unit test for various opcodes, will be removed later
@@ -145,15 +156,6 @@ void chip8::emulatetest()
 
 }
 
-void chip8::romtest()
-{
-    //loop N times
-    while (1) {
-        opcode = fetch();
-        decode(opcode);
-//        puts("looped");
-    }
-}
 
 //nothing to see here
 uint16_t chip8::fetch()
@@ -232,14 +234,17 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0xA: {//ANNN 	MEM 	I = NNN 	Sets I to the address NNN.
+        puts("Sets I");
         I.value = (op  & 0x0FFF);
         break;
     }
     case 0xB: {//BNNN 	Flow 	PC = V0 + NNN 	Jumps to the address NNN plus V0.
+        puts("Jumps to addr");
         pc = m_mem.V[0] + (op & 0x0FFF);
         break;
     }
     case 0xC: {//CXNN 	Rand 	Vx = rand() & NN 	Sets VX to the result of a bitwise and operation on a random number (Typically: 0 to 255) and NN.
+        puts("Rand & addr");
         uint8_t regX = (op & 0x0F00u) >> 8u;
         m_mem.V[regX] = rand() & (0x00FF & op);
         break;
@@ -252,10 +257,11 @@ void chip8::decode(uint16_t op)
 void chip8::decode8nX(uint16_t opc8)
 {
     uint8_t op8 = OPCODE8nN(opc8);
+    puts("Decode 8XYN");
+
     uint8_t regX=0, regY=0;
     if (op8 < OP_8XY0 || op8 > OP_8XYE)
         return;
-    puts("Decode 8XYN");
     regX = (opc8 & 0x0F00u) >> 8u;
     regY = (opc8 & 0x000F0u) >> 4u;
 

@@ -8,14 +8,17 @@
 int main(int argc, char** argv) {
     chip8 test;
     test.init();
-
-    test.emulatetest();
+//    test.emulatetest();
     //hardocded test - will do later
+#if 1
     if (test.loadApplication("/home/ilian/gitprojects/chip8emu/assets/test_opcode.ch8")) {
-        //ivz test.emulatetest(); //after loading - test opcodes
-        test.romtest();
+        //test.romtest(); //after loading - test opcodes
+        test.start();
     } else {
         printf("Failed to load rom\r\n");
     }
+#else
+    test.emulatetest();
+#endif
     return 0;
 }

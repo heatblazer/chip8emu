@@ -1,12 +1,15 @@
 #ifndef CHIP8
 #define CHIP8
 #include <stdint.h>
+#include <atomic>
 
 #define SCREEN_SIZE 64*32
 #define MAX_KEYS 16
 
 class chip8
 {
+public:
+    std::atomic<bool> Running;
 public:
     chip8();
     ~chip8();
@@ -19,12 +22,11 @@ public:
     bool loadApplication(const char* fname);
     void start();
 
-
 #if 1 //dbg
     void emulatetest();
 
-    void romtest();
 #endif
+
 private:
 
     unsigned long m_loadedFileSz;
