@@ -27,7 +27,10 @@ public:
 private:
 
     uint16_t fetch();
+
     void decode(uint16_t op); // will redo it later...if needed to return some data
+
+    void decode8nX(uint16_t);
 
     uint16_t pc;         // program counter
     uint16_t opcode;     // opcode
