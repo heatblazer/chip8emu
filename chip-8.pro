@@ -18,5 +18,7 @@ HEADERS += \
     chip8.h
 
 DISTFILES += \
-    README.md
+    README.md \
+    assets/opcodechip8.png \
+    assets/test_opcode.ch8
 

@@ -21,9 +21,6 @@
 #define OP_8XYD 0x8D
 #define OP_8XYE 0x8E
 
-
-
-
 static const unsigned int START_ADDRESS = 0x200; //as from papers
 
 static const uint8_t chip8_fontset[] = //as from papers
@@ -87,6 +84,20 @@ void chip8::emulateCycle()
     decode(opcode);
 }
 
+bool chip8::loadApplication(const char *fname)
+{
+    uint8_t* pBegin = &m_mem.memory[START_ADDRESS+1];
+    FILE* fp = fopen(fname, "rb");
+    if (!fp)
+        return false;
+    fseek(fp, 0, SEEK_END);
+    size_t size = ftell(fp);
+    rewind(fp);
+    fread(pBegin,size, sizeof(uint8_t), fp);
+    fclose(fp);
+    return true;
+}
+
 //the rule of loop-fetch-decode-exec-update
 void chip8::start()
 {
@@ -135,6 +146,15 @@ void chip8::emulatetest()
 
 }
 
+void chip8::romtest()
+{
+    //loop N times
+    for(int i=0; i < 478; i++) {
+        opcode = fetch();
+        decode(opcode);
+    }
+}
+
 //nothing to see here
 uint16_t chip8::fetch()
 {
@@ -151,10 +171,12 @@ void chip8::decode(uint16_t op)
     switch (op0) {
     case 0x00E0: {
         //cleaer screen
+        puts("Clear screen");
         memset(&m_mem.gfx, 0, sizeof(m_mem.gfx));
         break;
     }
     case 0x00EE: {
+        puts("Pop stack");
         pc = stack[--sp]; //pop the stack
         break;
     }
@@ -165,11 +187,13 @@ void chip8::decode(uint16_t op)
     uint8_t code = (op >> 12u) & 0xF;
     switch (code) {
     case 0x1: {
+        puts("Jump to NNN");
         //jump to NNN address
         pc = (op & 0x0FFFu); // override the +2??/
         break;
     }
     case 0x2: {
+        puts("Call func");
         // call func - use sp and PC...
         uint16_t addr = (op & 0x0FFFu);
         stack[++sp] = pc; // sooo ... put the program counter to the stack
@@ -178,6 +202,7 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0x6: {
+        puts("Load to register");
         //assing
 //        6XNN 	Const 	Vx = N 	Sets VX to NN.
         uint8_t reg = (op & 0x0F00) >> 8;
@@ -186,6 +211,7 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0x7: {
+        puts("Accumulate to X");
         uint8_t reg = (op & 0x0F00) >> 8;
         uint8_t data = (op & 0x00FF);
         m_mem.V[reg] += data;
@@ -207,6 +233,8 @@ void chip8::decode8nX(uint16_t opc8)
     uint8_t regX=0, regY=0;
     if (op8 < OP_8XY0 || op8 > OP_8XYE)
         return;
+    puts("Decode 8XYN");
+
     regX = (opc8 & 0x0F00u) >> 8u;
     regY = (opc8 & 0x000F0u) >> 4u;
 

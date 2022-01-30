@@ -22,6 +22,8 @@ public:
 
 #if 1 //dbg
     void emulatetest();
+
+    void romtest();
 #endif
 
 private:
