@@ -25,6 +25,10 @@ public:
 
     void romtest();
 #endif
+private:
+
+    unsigned long m_loadedFileSz;
+
 
 private:
 

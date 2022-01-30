@@ -49,7 +49,7 @@ static const uint8_t chip8_fontset[] = //as from papers
 
 #define OPCODE8nN(X) ( ((X) & 0xF000) >> 8u) | ((X) & 0x000F)
 
-chip8::chip8() : pc{0x00}, opcode{0}, sp{0}
+chip8::chip8() : m_loadedFileSz{0}, pc{0x00}, opcode{0}, sp{0}
 {
 
 }
@@ -90,7 +90,7 @@ bool chip8::loadApplication(const char *fname)
     if (!fp)
         return false;
     fseek(fp, 0, SEEK_END);
-    size_t size = ftell(fp);
+    size_t size = m_loadedFileSz = ftell(fp);
     rewind(fp);
     fread(pBegin,size, sizeof(uint8_t), fp);
     fclose(fp);
@@ -148,9 +148,10 @@ void chip8::emulatetest()
 void chip8::romtest()
 {
     //loop N times
-    for(int i=0; i < 478; i++) {
+    while (1) {
         opcode = fetch();
         decode(opcode);
+//        puts("looped");
     }
 }
 

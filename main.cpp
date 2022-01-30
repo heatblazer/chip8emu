@@ -8,6 +8,7 @@
 int main(int argc, char** argv) {
     chip8 test;
     test.init();
+
     test.emulatetest();
     //hardocded test - will do later
     if (test.loadApplication("/home/ilian/gitprojects/chip8emu/assets/test_opcode.ch8")) {
