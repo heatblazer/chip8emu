@@ -290,9 +290,17 @@ void chip8::decode(uint16_t op)
         int ypos = m_mem.V[regY] % chip8::Height;
         //we will read I
         for(uint8_t i = 0; i < heightN; i++) {
-            uint8_t sprite = m_mem.memory[I.value + i];
+            uint8_t sprite = m_mem.memory[I.value + i];            
             for(uint8_t j=0; j < 8; j++) {
-                // set pixel at screen ... TODO
+                uint8_t pixel = sprite & (0x80u >> i);
+                uint32_t* vmemptr = (uint32_t*)&m_mem.gfx[(ypos + i) * chip8::Width + (xpos + j)];
+                // set pixel at screen ...
+                if (pixel) {
+                    if (*vmemptr == 0xFFFFFFFFu)
+                        m_mem.V[0xF] = 1;
+                    *vmemptr ^= ~(0);
+                }
+
             }
         }
         break;

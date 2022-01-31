@@ -47,7 +47,7 @@ private:
     unsigned long m_loadedFileSz;
 
 
-private:
+public:
 
     uint16_t fetch();
 

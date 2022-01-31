@@ -7,7 +7,7 @@ CONFIG -= qt #will add Qt later :)
 #LIBS += -lsfml-window
 #LIBS += -lsfml-system
 
-#LIBS += -lSDL2
+LIBS += -lSDL2
 
 #chip-8 emyulator
 
@@ -20,7 +20,9 @@ HEADERS += \
 DISTFILES += \
     README.md \
     assets/Screenshot_2022-01-31_08-58-12.png \
+    assets/consolememgfxdmp.png \
     assets/dump.txt \
     assets/opcodechip8.png \
+    assets/pixels1pass.png \
     assets/test_opcode.ch8
 
