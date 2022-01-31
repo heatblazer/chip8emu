@@ -23,6 +23,7 @@ DISTFILES += \
     assets/consolememgfxdmp.png \
     assets/dump.txt \
     assets/opcodechip8.png \
+    assets/ourtarget.png \
     assets/pixels1pass.png \
     assets/test_opcode.ch8
 
