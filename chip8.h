@@ -23,9 +23,13 @@ public:
     bool    m_drawFlag;
 
     void init(void);
+
     void emulateCycle(void);
+
     void debugRender(void);
+
     bool loadApplication(const char* fname);
+
     void start();
 
 #if 1 //dbg
@@ -34,6 +38,8 @@ public:
     void dumpgfx();
 
     void blinkred();
+
+    void testPutXY(uint8_t x, uint8_t y, uint8_t color);
 #endif
 
 private:

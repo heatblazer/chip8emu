@@ -14,6 +14,12 @@ int main(int argc, char** argv) {
 
 // like a text draw
     test.blinkred();
+    test.testPutXY(1,1, 0);
+    test.testPutXY(2,2, 0);
+    test.testPutXY(10,10, 0);
+    test.testPutXY(20,20, 0);
+    test.testPutXY(60,30, 0);
+
     test.dumpgfx();
 // end test draw
 

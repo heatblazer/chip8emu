@@ -163,8 +163,8 @@ void chip8::dumpgfx()
         for (int y=0; y < chip8::Height; y++) {
             printf("[%02x]", m_mem.gfx[x * chip8::Height + y]);
         }
+        puts("....................................................................................");
     }
-    puts("...");
 
 }
 
@@ -174,7 +174,13 @@ void chip8::blinkred()
         for (int y=0; y < chip8::Height; y++) {
             m_mem.gfx[x * chip8::Height + y] = 0xFA;
         }
+
     }
+}
+
+void chip8::testPutXY(uint8_t x, uint8_t y, uint8_t color)
+{
+    m_mem.gfx[x * chip8::Height + y] = color;
 }
 
 
