@@ -13,19 +13,20 @@ int main(int argc, char** argv) {
 #if 1
 
 // like a text draw
+    puts("Test graphics");
     test.blinkred();
     test.testPutXY(1,1, 0);
     test.testPutXY(2,2, 0);
     test.testPutXY(10,10, 0);
     test.testPutXY(20,20, 0);
     test.testPutXY(60,30, 0);
-
     test.dumpgfx();
 // end test draw
 
-
+    puts("Test rom loading");
     if (test.loadApplication("/home/ilian/gitprojects/chip8emu/assets/test_opcode.ch8")) {
         //test.romtest(); //after loading - test opcodes
+        puts("Test emulation");
         test.start();
     } else {
         printf("Failed to load rom\r\n");

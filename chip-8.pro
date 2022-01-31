@@ -20,6 +20,7 @@ HEADERS += \
 DISTFILES += \
     README.md \
     assets/Screenshot_2022-01-31_08-58-12.png \
+    assets/dump.txt \
     assets/opcodechip8.png \
     assets/test_opcode.ch8
 

@@ -1,0 +1,1898 @@
+Test graphics
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][00][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][00][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][00][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][00][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][00][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+[fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa][fa]....................................................................................
+Test rom loading
+Test emulation
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Sets I
+Sets I
+Clear screen
+Sets I
+Sets I
+Clear screen
+Call func
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+Sets I
+Accumulate to X
+Jump to NNN
+S
