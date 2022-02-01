@@ -200,12 +200,12 @@ void chip8::decode(uint16_t op)
     switch (op0) {
     case 0x00E0: {
         //cleaer screen
-        puts("Clear screen");
+        puts("00E0");
         memset(&m_mem.gfx, 0, sizeof(m_mem.gfx));
         break;
     }
     case 0x00EE: {
-        puts("Pop stack");
+        puts("00EE");
         pc = stack[--sp]; //pop the stack
         break;
     }
@@ -216,13 +216,13 @@ void chip8::decode(uint16_t op)
     uint8_t code = (op >> 12u) & 0xF;
     switch (code) {
     case 0x1: {
-        puts("Jump to NNN");
+        puts("1NNN");
         //jump to NNN address
         pc = (op & 0x0FFFu); // override the +2??/
         break;
     }
     case 0x2: {
-        puts("Call func");
+        puts("2NNN");
         // call func - use sp and PC...
         uint16_t addr = (op & 0x0FFFu);
         stack[++sp] = pc; // sooo ... put the program counter to the stack
@@ -230,8 +230,35 @@ void chip8::decode(uint16_t op)
         pc = addr; // then set the new value to the address we are calling...
         break;
     }
+    //if x != y ...
+    case 0x3: {//3XNN 	Cond 	if (Vx == NN) 	Skips the next instruction if VX equals NN. (
+                //Usually the next instruction is a jump to skip a code block);
+        puts("3XNN");
+        uint8_t regX = (op & 0x0F00u) >> 8u;
+        uint8_t NN = (op & 0x00FF);
+        if (m_mem.V[regX] == NN)
+            pc +=2; //skip
+        break;
+    }
+    case 0x4: {//4XNN 	Cond 	if (Vx != NN) 	Skips the next instruction if VX does not equal NN.
+        //(Usually the next instruction is a jump to skip a code block);
+        puts("4XNN");
+        uint8_t regX = (op & 0x0F00u) >> 8u;
+        uint8_t NN = (op & 0x00FF);
+        if (m_mem.V[regX] != NN)
+            pc +=2; //skip
+        break;
+    }
+    case 0x5: {//5XY0 	Cond 	if (Vx == Vy) 	Skips the next instruction if VX equals VY. (Usually the next instruction is a jump to skip a code block);
+        puts("5XY0");
+        uint8_t regX = (op & 0x0F00u) >> 8u;
+        uint8_t regY = (op & 0x00F0) >> 4u;
+        if (m_mem.V[regX] == m_mem.V[regY])
+            pc +=2; //skip
+        break;
+    }
     case 0x6: {
-        puts("Load to register");
+        puts("6XNN");
         //assing
 //        6XNN 	Const 	Vx = N 	Sets VX to NN.
         uint8_t reg = (op & 0x0F00) >> 8;
@@ -240,7 +267,7 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0x7: {
-        puts("Accumulate to X");
+        puts("7XNN");
         uint8_t reg = (op & 0x0F00) >> 8;
         uint8_t data = (op & 0x00FF);
         m_mem.V[reg] += data;
@@ -252,7 +279,7 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0x9: {//9XY0 	Cond 	if (Vx != Vy) 	Skips the next instruction if VX does not equal VY. (Usually the next instruction is a jump to skip a code block);
-        puts("Skip if X ne Y");
+        puts("9XY0");
         uint8_t regX = (op & 0x0F00) >> 8u;
         uint8_t regY = (op & 0x00F0) >> 4u;
         if (m_mem.V[regX] != m_mem.V[regY]) {
@@ -261,23 +288,23 @@ void chip8::decode(uint16_t op)
         break;
     }
     case 0xA: {//ANNN 	MEM 	I = NNN 	Sets I to the address NNN.
-        puts("Sets I");
+        puts("ANNN");
         I.value = (op  & 0x0FFF);
         break;
     }
     case 0xB: {//BNNN 	Flow 	PC = V0 + NNN 	Jumps to the address NNN plus V0.
-        puts("Jumps to addr");
+        puts("BNNN");
         pc = m_mem.V[0] + (op & 0x0FFF);
         break;
     }
     case 0xC: {//CXNN 	Rand 	Vx = rand() & NN 	Sets VX to the result of a bitwise and operation on a random number (Typically: 0 to 255) and NN.
-        puts("Rand & addr");
+        puts("CXNN");
         uint8_t regX = (op & 0x0F00u) >> 8u;
         m_mem.V[regX] = rand() & (0x00FF & op);
         break;
     }
     case 0xD: {
-        puts("Draw call");
+        puts("DXYN");
         //DXYN 	Display 	draw(Vx, Vy, N) 	Draws a sprite at coordinate (VX, VY) that has a width of 8 pixels and a height of N pixels.
         //Each row of 8 pixels is read as bit-coded starting from memory location I;
         //I value does not change after the execution of this instruction.
@@ -293,6 +320,7 @@ void chip8::decode(uint16_t op)
             uint8_t sprite = m_mem.memory[I.value + i];            
             for(uint8_t j=0; j < 8; j++) {
                 uint8_t pixel = sprite & (0x80u >> i);
+#if 1 // mmm not ok...
                 uint32_t* vmemptr = (uint32_t*)&m_mem.gfx[(ypos + i) * chip8::Width + (xpos + j)];
                 // set pixel at screen ...
                 if (pixel) {
@@ -300,11 +328,12 @@ void chip8::decode(uint16_t op)
                         m_mem.V[0xF] = 1;
                     *vmemptr ^= ~(0);
                 }
-
+#endif
             }
         }
         break;
     }
+    case 0x000:
     default:
         break;
     }
@@ -313,8 +342,6 @@ void chip8::decode(uint16_t op)
 void chip8::decode8nX(uint16_t opc8)
 {
     uint8_t op8 = OPCODE8nN(opc8);
-    puts("Decode 8XYN");
-
     uint8_t regX=0, regY=0;
     if (op8 < OP_8XY0 || op8 > OP_8XYE)
         return;
@@ -323,22 +350,27 @@ void chip8::decode8nX(uint16_t opc8)
 
     switch (op8) {
     case OP_8XY0: { //wiki: 8XY0 	Assig 	Vx = Vy 	Sets VX to the value of VY.
+        puts("8XY0");
         m_mem.V[regX] = m_mem.V[regY];
         break;
     }
     case OP_8XY1: { //8XY1 	BitOp 	Vx |= Vy 	Sets VX to VX or VY. (Bitwise OR operation);
+        puts("8XY1");
         m_mem.V[regX] |= m_mem.V[regY];
         break;
     }
     case OP_8XY2: { //8XY2 	BitOp 	Vx &= Vy 	Sets VX to VX and VY. (Bitwise AND operation);
+        puts("8XY2");
         m_mem.V[regX] &= m_mem.V[regY];
         break;
     }
     case OP_8XY3: { //8XY3[a] 	BitOp 	Vx ^= Vy 	Sets VX to VX xor VY.
+        puts("8XY3");
         m_mem.V[regX] ^= m_mem.V[regY];
         break;
     }
     case OP_8XY4: { //8XY4 	Math 	Vx += Vy 	Adds VY to VX. VF is set to 1 when there's a carry, and to 0 when there is not.
+        puts("8XY4");
         uint16_t summ = m_mem.V[regX] + m_mem.V[regY];
         if (summ > 0xFFu) {
             m_mem.V[0xF] = 1;//carry
@@ -349,6 +381,7 @@ void chip8::decode8nX(uint16_t opc8)
         break;
     }
     case OP_8XY5: { //8XY5 	Math 	Vx -= Vy 	VY is subtracted from VX. VF is set to 0 when there's a borrow, and 1 when there is not.
+        puts("8XY5");
         if (m_mem.V[regX] > m_mem.V[regY]) {
             m_mem.V[0xF] = 1;
         } else {
@@ -358,11 +391,13 @@ void chip8::decode8nX(uint16_t opc8)
         break;
     }
     case OP_8XY6: { //8XY6[a] 	BitOp 	Vx >>= 1 	Stores the least significant bit of VX in VF and then shifts VX to the right by 1.[b]
+        puts("8XY6");
         m_mem.V[0xF] = m_mem.V[regX] & 0x01;
         m_mem.V[regX] >>= 1;
         break;
     }
     case OP_8XY7: { //8XY7[a] 	Math 	Vx = Vy - Vx 	Sets VX to VY minus VX. VF is set to 0 when there's a borrow, and 1 when there is not.
+        puts("8XY7");
         if (m_mem.V[regY] < m_mem.V[regX]) {
             m_mem.V[0xF] = 1;
         } else {
@@ -372,6 +407,7 @@ void chip8::decode8nX(uint16_t opc8)
         break;
     }
     case OP_8XYE: {// 8XYE[a] 	BitOp 	Vx <<= 1 	Stores the most significant bit of VX in VF and then shifts VX to the left by 1.[b]
+        puts("8XYE");
         m_mem.V[0xF] = (m_mem.V[regX] & 0x80u) >> 7u;
         m_mem.V[regX] <<= 1;
         break;
@@ -380,7 +416,5 @@ void chip8::decode8nX(uint16_t opc8)
         break;
     }
 }
-
-
 
 

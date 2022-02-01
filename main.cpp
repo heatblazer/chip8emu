@@ -50,7 +50,7 @@ void DrawChip8(chip8 *pChip)
 {
     SDL_Init(SDL_INIT_VIDEO);
 
-    SDL_Window *window = SDL_CreateWindow("Test", 0,0,640,480, 0);
+    SDL_Window *window = SDL_CreateWindow("Test", 0,0,320,240, 0);
     if (window == NULL)
     {
         return ;
